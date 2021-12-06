@@ -32,9 +32,10 @@ public class Animal {
     @OneToMany(mappedBy = "animal")
     private List<Pet> pets;
 
-    private boolean enabled=true;
+    private Boolean enabled=true;
 
     @CreatedDate
+    @Column (updatable = false)
     private LocalDateTime dateCreation;
 
     @LastModifiedDate
