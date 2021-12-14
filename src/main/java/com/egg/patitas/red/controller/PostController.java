@@ -195,4 +195,18 @@ public class PostController {
         return new RedirectView("/posts");
     }
 
+    @GetMapping("/{id}") //agregado recientemente
+    public ModelAndView showById(@PathVariable Integer id) {
+        ModelAndView mav = new ModelAndView("post-detail");
+        try {
+            Post post = postService.findById(id);
+            mav.addObject("post", post);
+            mav.addObject("title", "Detalles del Posteo");
+        } catch (Exception e) {
+            mav.addObject("error-get-post", e.getMessage());
+        }
+        return mav;
+    }
+
+
 }
