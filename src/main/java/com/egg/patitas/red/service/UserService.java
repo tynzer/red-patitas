@@ -33,8 +33,8 @@ public class UserService implements UserDetailsService {
     private final BCryptPasswordEncoder bCryptPasswordEncoder;
     private final EmailSend emailSend;
     private final TokenConfirmationService tokenConfirmationService;
-    private final String CONFIRM="http://localhost:8080/auth/register/confirm?token=";
-    private final String CHANGE_PASSWORD="http://localhost:8080/auth/password/confirm?token=";
+    private final String CONFIRM="http://huellasapp.herokuapp.com/auth/register/confirm?token="; 
+    private final String CHANGE_PASSWORD="http://huellasapp.herokuapp.com/auth/password/confirm?token=";
 
 
 
